@@ -26,7 +26,7 @@
     [self.view addSubview:_colorPickerView];
     
     UIView *view = _colorPickerView;
-    id topGuide = myViewController.topLayoutGuide;
+    id topGuide = self.topLayoutGuide;
     NSDictionary *views = NSDictionaryOfVariableBindings (view, topGuide);
     NSArray *vConstraints = [NSLayoutConstraint constraintsWithVisualFormat:@"V:[topGuide]-0-[view]-0-|"
                                                                     options:0

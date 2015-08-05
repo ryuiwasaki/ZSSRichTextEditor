@@ -110,11 +110,12 @@ static Class hackishFixClass = Nil;
     self.shouldShowKeyboard = YES;
     self.formatHTML = YES;
     
-    self.enabledself.edgesForExtendedLayout = UIRectEdgeNone;
+    self.enabledToolbarItems = [[NSArray alloc] init];
+    self.edgesForExtendedLayout = UIRectEdgeNone;
     
     // Source View
     CGFloat topOffset = self.topLayoutGuide.length;
-    CGRect frame = CGRectMake(0, topOffset, self.view.frame.size.width, self.view.frame.size.height - topOffset);ToolbarItems = [[NSArray alloc] init];
+    CGRect frame = CGRectMake(0, topOffset, self.view.frame.size.width, self.view.frame.size.height - topOffset);
     self.sourceView = [[ZSSTextView alloc] initWithFrame:frame];
     self.sourceView.hidden = YES;
     self.sourceView.autocapitalizationType = UITextAutocapitalizationTypeNone;

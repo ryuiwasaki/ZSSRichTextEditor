@@ -19,27 +19,49 @@
     [super viewDidLoad];
     
     _colorPickerView = [[HRColorPickerView alloc] init];
+    self.edgesForExtendedLayout = NO;
+    CGFloat topOffset = self.topLayoutGuide.length;
+    CGRect frame = CGRectMake(0, topOffset, self.view.frame.size.width, self.view.frame.size.height - topOffset);
+    _colorPickerView.frame = frame;
     _colorPickerView.color = self.color;
     [_colorPickerView addTarget:self
-                        action:@selector(action:)
-              forControlEvents:UIControlEventValueChanged];
+                         action:@selector(action:)
+               forControlEvents:UIControlEventValueChanged];
+    _colorPickerView.translatesAutoresizingMaskIntoConstraints = NO;
     [self.view addSubview:_colorPickerView];
     
+    if ( self.navigationController ) {
+        
+    }
     UIView *view = _colorPickerView;
     id topGuide = self.topLayoutGuide;
-    NSDictionary *views = NSDictionaryOfVariableBindings (view, topGuide);
-    NSArray *vConstraints = [NSLayoutConstraint constraintsWithVisualFormat:@"V:[topGuide]-0-[view]-0-|"
-                                                                    options:0
-                                                                    metrics:nil
-                                                                      views:views];
-    [self.view addConstraints:vConstraints];
-    NSArray *hConstraints = [NSLayoutConstraint constraintsWithVisualFormat:@"H:|-0-[_colorPickerView]-0-|"
+    NSNumber *guideLength = [NSNumber numberWithInteger:self.topLayoutGuide.length];
+    NSDictionary *topAndViews = NSDictionaryOfVariableBindings(view, topGuide);
+    NSDictionary *length = NSDictionaryOfVariableBindings(guideLength);
+    NSArray *topGuideConstraints = [NSLayoutConstraint constraintsWithVisualFormat:@"V:|-guideLength-[view]"
+                                                                           options:0
+                                                                           metrics:length
+                                                                             views:topAndViews];
+    [self.view addConstraints:topGuideConstraints];
+    
+    NSDictionary *views = NSDictionaryOfVariableBindings(view);
+    NSArray *hConstraints = [NSLayoutConstraint constraintsWithVisualFormat:@"H:|-0-[view]-0-|"
                                                                     options:0
                                                                     metrics:nil
                                                                       views:views];
     [self.view addConstraints:hConstraints];
     
+    NSArray *vConstraints = [NSLayoutConstraint constraintsWithVisualFormat:@"V:[view]-0-|"
+                                                                    options:0
+                                                                    metrics:nil
+                                                                      views:views];
+    [self.view addConstraints:vConstraints];
+    
+    
+    
     [self.view layoutIfNeeded];
+    
+    [self addSaveButton];
     // Do any additional setup after loading the view.
 }
 
@@ -48,28 +70,26 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (void)action:(id)sender {
-   
-    self.color = _colorPickerView.color;
+- (void)addSaveButton {
+    
+    UIBarButtonItem *button = [[UIBarButtonItem alloc] initWithTitle:@"Save" style:UIBarButtonItemStyleDone target:self action:@selector(save:)];
+    self.navigationItem.rightBarButtonItems = @[button];
+    
 }
 
-- (void)save
-{
-    if (self.delegate) {
+- (void)action:(id)sender {
+    
+    self.color = _colorPickerView.color;
+    
+}
 
+- (void)save:(id)sender{
+    
+    if (self.delegate) {
+        
         [self.delegate setSelectedColor:_colorPickerView.color tag:self.tag];
     }
     [self.navigationController popViewControllerAnimated:YES];
 }
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

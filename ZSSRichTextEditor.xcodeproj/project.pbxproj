@@ -36,12 +36,6 @@
 		45A0CA3C18A8521600F3F35E /* CYRTextStorage.m in Sources */ = {isa = PBXBuildFile; fileRef = 45A0CA3618A8521600F3F35E /* CYRTextStorage.m */; };
 		45A0CA3D18A8521600F3F35E /* CYRTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 45A0CA3818A8521600F3F35E /* CYRTextView.m */; };
 		45A0CA3E18A8521600F3F35E /* CYRToken.m in Sources */ = {isa = PBXBuildFile; fileRef = 45A0CA3A18A8521600F3F35E /* CYRToken.m */; };
-		45A0CA4C18A8522A00F3F35E /* HRBrightnessCursor.m in Sources */ = {isa = PBXBuildFile; fileRef = 45A0CA4018A8522A00F3F35E /* HRBrightnessCursor.m */; };
-		45A0CA4D18A8522A00F3F35E /* HRCgUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 45A0CA4218A8522A00F3F35E /* HRCgUtil.m */; };
-		45A0CA4E18A8522A00F3F35E /* HRColorCursor.m in Sources */ = {isa = PBXBuildFile; fileRef = 45A0CA4418A8522A00F3F35E /* HRColorCursor.m */; };
-		45A0CA4F18A8522A00F3F35E /* HRColorPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 45A0CA4718A8522A00F3F35E /* HRColorPickerView.m */; };
-		45A0CA5018A8522A00F3F35E /* HRColorPickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 45A0CA4918A8522A00F3F35E /* HRColorPickerViewController.m */; };
-		45A0CA5118A8522A00F3F35E /* HRColorUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 45A0CA4B18A8522A00F3F35E /* HRColorUtil.m */; };
 		45E38AB618AC3AA70079C928 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 45E38AB518AC3AA70079C928 /* Default-568h@2x.png */; };
 		45F73D0718D7ADAE00CD6DBA /* ZSSpicker@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 45F73D0618D7ADAE00CD6DBA /* ZSSpicker@2x.png */; };
 		45F73D2B18D7AE9700CD6DBA /* ZSSbgcolor.png in Resources */ = {isa = PBXBuildFile; fileRef = 45F73D0818D7AE9700CD6DBA /* ZSSbgcolor.png */; };
@@ -114,6 +108,8 @@
 		45F860C618A84CFA0011266B /* ZSSunlink@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 45F860A418A84CFA0011266B /* ZSSunlink@2x.png */; };
 		45F860C718A84CFA0011266B /* ZSSunorderedlist@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 45F860A518A84CFA0011266B /* ZSSunorderedlist@2x.png */; };
 		45F860C818A84CFA0011266B /* ZSSviewsource@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 45F860A618A84CFA0011266B /* ZSSviewsource@2x.png */; };
+		A8CB1BA21B710F69002D734C /* ColorPickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A8CB1BA11B710F69002D734C /* ColorPickerViewController.m */; };
+		A8CB1BA81B7117C8002D734C /* UIColor+Hex.m in Sources */ = {isa = PBXBuildFile; fileRef = A8CB1BA71B7117C8002D734C /* UIColor+Hex.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -166,19 +162,6 @@
 		45A0CA3818A8521600F3F35E /* CYRTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CYRTextView.m; path = "ZSSRichTextEditor/Source/Third Party/CYRTextView.m"; sourceTree = SOURCE_ROOT; };
 		45A0CA3918A8521600F3F35E /* CYRToken.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CYRToken.h; path = "ZSSRichTextEditor/Source/Third Party/CYRToken.h"; sourceTree = SOURCE_ROOT; };
 		45A0CA3A18A8521600F3F35E /* CYRToken.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CYRToken.m; path = "ZSSRichTextEditor/Source/Third Party/CYRToken.m"; sourceTree = SOURCE_ROOT; };
-		45A0CA3F18A8522A00F3F35E /* HRBrightnessCursor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HRBrightnessCursor.h; path = "ZSSRichTextEditor/Source/Third Party/HRBrightnessCursor.h"; sourceTree = SOURCE_ROOT; };
-		45A0CA4018A8522A00F3F35E /* HRBrightnessCursor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HRBrightnessCursor.m; path = "ZSSRichTextEditor/Source/Third Party/HRBrightnessCursor.m"; sourceTree = SOURCE_ROOT; };
-		45A0CA4118A8522A00F3F35E /* HRCgUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HRCgUtil.h; path = "ZSSRichTextEditor/Source/Third Party/HRCgUtil.h"; sourceTree = SOURCE_ROOT; };
-		45A0CA4218A8522A00F3F35E /* HRCgUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HRCgUtil.m; path = "ZSSRichTextEditor/Source/Third Party/HRCgUtil.m"; sourceTree = SOURCE_ROOT; };
-		45A0CA4318A8522A00F3F35E /* HRColorCursor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HRColorCursor.h; path = "ZSSRichTextEditor/Source/Third Party/HRColorCursor.h"; sourceTree = SOURCE_ROOT; };
-		45A0CA4418A8522A00F3F35E /* HRColorCursor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HRColorCursor.m; path = "ZSSRichTextEditor/Source/Third Party/HRColorCursor.m"; sourceTree = SOURCE_ROOT; };
-		45A0CA4518A8522A00F3F35E /* HRColorPickerMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HRColorPickerMacros.h; path = "ZSSRichTextEditor/Source/Third Party/HRColorPickerMacros.h"; sourceTree = SOURCE_ROOT; };
-		45A0CA4618A8522A00F3F35E /* HRColorPickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HRColorPickerView.h; path = "ZSSRichTextEditor/Source/Third Party/HRColorPickerView.h"; sourceTree = SOURCE_ROOT; };
-		45A0CA4718A8522A00F3F35E /* HRColorPickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HRColorPickerView.m; path = "ZSSRichTextEditor/Source/Third Party/HRColorPickerView.m"; sourceTree = SOURCE_ROOT; };
-		45A0CA4818A8522A00F3F35E /* HRColorPickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HRColorPickerViewController.h; path = "ZSSRichTextEditor/Source/Third Party/HRColorPickerViewController.h"; sourceTree = SOURCE_ROOT; };
-		45A0CA4918A8522A00F3F35E /* HRColorPickerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HRColorPickerViewController.m; path = "ZSSRichTextEditor/Source/Third Party/HRColorPickerViewController.m"; sourceTree = SOURCE_ROOT; };
-		45A0CA4A18A8522A00F3F35E /* HRColorUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HRColorUtil.h; path = "ZSSRichTextEditor/Source/Third Party/HRColorUtil.h"; sourceTree = SOURCE_ROOT; };
-		45A0CA4B18A8522A00F3F35E /* HRColorUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HRColorUtil.m; path = "ZSSRichTextEditor/Source/Third Party/HRColorUtil.m"; sourceTree = SOURCE_ROOT; };
 		45E38AB518AC3AA70079C928 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		45F73D0618D7ADAE00CD6DBA /* ZSSpicker@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "ZSSpicker@2x.png"; path = "Source/Images/ZSSpicker@2x.png"; sourceTree = "<group>"; };
 		45F73D0818D7AE9700CD6DBA /* ZSSbgcolor.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ZSSbgcolor.png; path = Source/Images/ZSSbgcolor.png; sourceTree = "<group>"; };
@@ -252,6 +235,10 @@
 		45F860A418A84CFA0011266B /* ZSSunlink@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "ZSSunlink@2x.png"; path = "Source/Images/ZSSunlink@2x.png"; sourceTree = "<group>"; };
 		45F860A518A84CFA0011266B /* ZSSunorderedlist@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "ZSSunorderedlist@2x.png"; path = "Source/Images/ZSSunorderedlist@2x.png"; sourceTree = "<group>"; };
 		45F860A618A84CFA0011266B /* ZSSviewsource@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "ZSSviewsource@2x.png"; path = "Source/Images/ZSSviewsource@2x.png"; sourceTree = "<group>"; };
+		A8CB1BA01B710F69002D734C /* ColorPickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ColorPickerViewController.h; path = "ZSSRichTextEditor/Source/Third Party/ColorPickerViewController.h"; sourceTree = SOURCE_ROOT; };
+		A8CB1BA11B710F69002D734C /* ColorPickerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ColorPickerViewController.m; path = "ZSSRichTextEditor/Source/Third Party/ColorPickerViewController.m"; sourceTree = SOURCE_ROOT; };
+		A8CB1BA61B7117C8002D734C /* UIColor+Hex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIColor+Hex.h"; path = "ZSSRichTextEditor/Source/Third Party/UIColor+Hex.h"; sourceTree = SOURCE_ROOT; };
+		A8CB1BA71B7117C8002D734C /* UIColor+Hex.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIColor+Hex.m"; path = "ZSSRichTextEditor/Source/Third Party/UIColor+Hex.m"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -403,6 +390,7 @@
 				4581EB85184845790048CAB0 /* View Controllers */,
 				4581EB7E184845790048CAB0 /* Frameworks */,
 				4581EB7D184845790048CAB0 /* Products */,
+				9EC1CDA11D0A08DBE6C7F61D /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -489,21 +477,19 @@
 		45EC1D6218763BDE009B6B61 /* ColorPicker */ = {
 			isa = PBXGroup;
 			children = (
-				45A0CA3F18A8522A00F3F35E /* HRBrightnessCursor.h */,
-				45A0CA4018A8522A00F3F35E /* HRBrightnessCursor.m */,
-				45A0CA4118A8522A00F3F35E /* HRCgUtil.h */,
-				45A0CA4218A8522A00F3F35E /* HRCgUtil.m */,
-				45A0CA4318A8522A00F3F35E /* HRColorCursor.h */,
-				45A0CA4418A8522A00F3F35E /* HRColorCursor.m */,
-				45A0CA4518A8522A00F3F35E /* HRColorPickerMacros.h */,
-				45A0CA4618A8522A00F3F35E /* HRColorPickerView.h */,
-				45A0CA4718A8522A00F3F35E /* HRColorPickerView.m */,
-				45A0CA4818A8522A00F3F35E /* HRColorPickerViewController.h */,
-				45A0CA4918A8522A00F3F35E /* HRColorPickerViewController.m */,
-				45A0CA4A18A8522A00F3F35E /* HRColorUtil.h */,
-				45A0CA4B18A8522A00F3F35E /* HRColorUtil.m */,
+				A8CB1BA01B710F69002D734C /* ColorPickerViewController.h */,
+				A8CB1BA11B710F69002D734C /* ColorPickerViewController.m */,
+				A8CB1BA61B7117C8002D734C /* UIColor+Hex.h */,
+				A8CB1BA71B7117C8002D734C /* UIColor+Hex.m */,
 			);
 			path = ColorPicker;
+			sourceTree = "<group>";
+		};
+		9EC1CDA11D0A08DBE6C7F61D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -513,9 +499,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4581EBA81848457C0048CAB0 /* Build configuration list for PBXNativeTarget "ZSSRichTextEditor" */;
 			buildPhases = (
+				77D5B16C3A59FFBBB4181351 /* Check Pods Manifest.lock */,
 				4581EB78184845790048CAB0 /* Sources */,
 				4581EB79184845790048CAB0 /* Frameworks */,
 				4581EB7A184845790048CAB0 /* Resources */,
+				1EE2493FDE59E766755747E8 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -533,7 +521,7 @@
 			isa = PBXProject;
 			attributes = {
 				CLASSPREFIX = ZSS;
-				LastUpgradeCheck = 0630;
+				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = "Zed Said Studio";
 				TargetAttributes = {
 					4581EB7B184845790048CAB0 = {
@@ -649,31 +637,60 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		1EE2493FDE59E766755747E8 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ZSSRichTextEditor/Pods-ZSSRichTextEditor-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		77D5B16C3A59FFBBB4181351 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		4581EB78184845790048CAB0 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				45A0CA4F18A8522A00F3F35E /* HRColorPickerView.m in Sources */,
 				2343B1DA199B2C9300349048 /* ZSSDemoList.m in Sources */,
+				A8CB1BA81B7117C8002D734C /* UIColor+Hex.m in Sources */,
 				2343B22F199D6E6700349048 /* ZSSCustomButtonsViewController.m in Sources */,
 				2343B22C199D6D6400349048 /* ZSSSelectiveViewController.m in Sources */,
 				4552C491189A094C004EF847 /* ZSSTextView.m in Sources */,
-				45A0CA4D18A8522A00F3F35E /* HRCgUtil.m in Sources */,
-				45A0CA5018A8522A00F3F35E /* HRColorPickerViewController.m in Sources */,
 				2343B1E0199BE4D000349048 /* ZSSLargeViewController.m in Sources */,
-				45A0CA4C18A8522A00F3F35E /* HRBrightnessCursor.m in Sources */,
 				4581EB8C1848457A0048CAB0 /* main.m in Sources */,
+				A8CB1BA21B710F69002D734C /* ColorPickerViewController.m in Sources */,
 				45A0CA3C18A8521600F3F35E /* CYRTextStorage.m in Sources */,
 				2343B1DD199B34B500349048 /* ZSSColorViewController.m in Sources */,
 				4581EB901848457A0048CAB0 /* ZSSAppDelegate.m in Sources */,
 				45A0CA3E18A8521600F3F35E /* CYRToken.m in Sources */,
 				4581EBBB184B0F5C0048CAB0 /* ZSSRichTextEditor.m in Sources */,
 				2343B229199D237100349048 /* ZSSPlaceholderViewController.m in Sources */,
-				45A0CA5118A8522A00F3F35E /* HRColorUtil.m in Sources */,
 				45A0CA3D18A8521600F3F35E /* CYRTextView.m in Sources */,
 				45A0CA3B18A8521600F3F35E /* CYRLayoutManager.m in Sources */,
-				45A0CA4E18A8522A00F3F35E /* HRColorCursor.m in Sources */,
 				4581EBB81848F8190048CAB0 /* ZSSDemoViewController.m in Sources */,
 				45F80458189B1E9300A1EDD9 /* ZSSDemoPickerViewController.m in Sources */,
 				4513B3D8184E8F5100A9CA86 /* ZSSBarButtonItem.m in Sources */,
@@ -738,6 +755,17 @@
 				GCC_PREFIX_HEADER = "ZSSRichTextEditor/ZSSRichTextEditor-Prefix.pch";
 				INFOPLIST_FILE = "ZSSRichTextEditor/ZSSRichTextEditor-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+					"-l\"Pods-ZSSRichTextEditor-ZSSRichTextEditor\"",
+					"-l\"Pods-ZSSRichTextEditor-Color-Picker-for-iOS\"",
+					"-framework",
+					"\"CoreGraphics\"",
+					"-framework",
+					"\"CoreText\"",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.zedsaid.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = ZSSRichTextEditor;
 				PROVISIONING_PROFILE = "A101C649-760C-4D35-A7F9-B98015D89A34";
 				WRAPPER_EXTENSION = app;
@@ -762,6 +790,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -827,6 +856,17 @@
 				GCC_PREFIX_HEADER = "ZSSRichTextEditor/ZSSRichTextEditor-Prefix.pch";
 				INFOPLIST_FILE = "ZSSRichTextEditor/ZSSRichTextEditor-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+					"-l\"Pods-ZSSRichTextEditor-ZSSRichTextEditor\"",
+					"-l\"Pods-ZSSRichTextEditor-Color-Picker-for-iOS\"",
+					"-framework",
+					"\"CoreGraphics\"",
+					"-framework",
+					"\"CoreText\"",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.zedsaid.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = ZSSRichTextEditor;
 				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
@@ -844,6 +884,17 @@
 				GCC_PREFIX_HEADER = "ZSSRichTextEditor/ZSSRichTextEditor-Prefix.pch";
 				INFOPLIST_FILE = "ZSSRichTextEditor/ZSSRichTextEditor-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+					"-l\"Pods-ZSSRichTextEditor-ZSSRichTextEditor\"",
+					"-l\"Pods-ZSSRichTextEditor-Color-Picker-for-iOS\"",
+					"-framework",
+					"\"CoreGraphics\"",
+					"-framework",
+					"\"CoreText\"",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.zedsaid.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = ZSSRichTextEditor;
 				PROVISIONING_PROFILE = "5E1FEC95-664C-4402-9258-48803C16F896";
 				WRAPPER_EXTENSION = app;

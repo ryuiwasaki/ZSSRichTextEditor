@@ -10,10 +10,9 @@
 #import <UIKit/UIKit.h>
 #import "ZSSRichTextEditor.h"
 #import "ZSSBarButtonItem.h"
-#import "HRColorUtil.h"
+#import "UIColor+Hex.h"
 #import "ZSSTextView.h"
-
-
+#import "ColorPickerViewController.h"
 @interface UIWebView (HackishAccessoryHiding)
 @property (nonatomic, assign) BOOL hidesInputAccessoryView;
 @end
@@ -733,12 +732,17 @@ static Class hackishFixClass = Nil;
     // Save the selection location
     [self.editorView stringByEvaluatingJavaScriptFromString:@"zss_editor.prepareInsert();"];
     
+    ColorPickerViewController *picker = [[ColorPickerViewController alloc] init];
+    picker.delegate = self;
+    picker.tag = 1;
+    picker.title = NSLocalizedString(@"Text Color", nil);
+    [self.navigationController pushViewController:picker animated:YES];
     // Call the picker
-    HRColorPickerViewController *colorPicker = [HRColorPickerViewController cancelableFullColorPickerViewControllerWithColor:[UIColor whiteColor]];
-    colorPicker.delegate = self;
-    colorPicker.tag = 1;
-    colorPicker.title = NSLocalizedString(@"Text Color", nil);
-    [self.navigationController pushViewController:colorPicker animated:YES];
+//    HRColorPickerViewController *colorPicker = [HRColorPickerViewController cancelableFullColorPickerViewControllerWithColor:[UIColor whiteColor]];
+//    colorPicker.delegate = self;
+//    colorPicker.tag = 1;
+//    colorPicker.title = NSLocalizedString(@"Text Color", nil);
+//    [self.navigationController pushViewController:colorPicker animated:YES];
     
 }
 
@@ -748,26 +752,26 @@ static Class hackishFixClass = Nil;
     [self.editorView stringByEvaluatingJavaScriptFromString:@"zss_editor.prepareInsert();"];
     
     // Call the picker
-    HRColorPickerViewController *colorPicker = [HRColorPickerViewController cancelableFullColorPickerViewControllerWithColor:[UIColor whiteColor]];
-    colorPicker.delegate = self;
-    colorPicker.tag = 2;
-    colorPicker.title = NSLocalizedString(@"BG Color", nil);
-    [self.navigationController pushViewController:colorPicker animated:YES];
+//    HRColorPickerViewController *colorPicker = [HRColorPickerViewController cancelableFullColorPickerViewControllerWithColor:[UIColor whiteColor]];
+//    colorPicker.delegate = self;
+//    colorPicker.tag = 2;
+//    colorPicker.title = NSLocalizedString(@"BG Color", nil);
+//    [self.navigationController pushViewController:colorPicker animated:YES];
     
 }
 
-- (void)setSelectedColor:(UIColor*)color tag:(int)tag {
-    
-    NSString *hex = [NSString stringWithFormat:@"#%06x",HexColorFromUIColor(color)];
-    NSString *trigger;
-    if (tag == 1) {
-        trigger = [NSString stringWithFormat:@"zss_editor.setTextColor(\"%@\");", hex];
-    } else if (tag == 2) {
-        trigger = [NSString stringWithFormat:@"zss_editor.setBackgroundColor(\"%@\");", hex];
-    }
-    [self.editorView stringByEvaluatingJavaScriptFromString:trigger];
-    
-}
+//- (void)setSelectedColor:(UIColor*)color tag:(int)tag {
+//    
+//    NSString *hex = [NSString stringWithFormat:@"#%06x",HexColorFromUIColor(color)];
+//    NSString *trigger;
+//    if (tag == 1) {
+//        trigger = [NSString stringWithFormat:@"zss_editor.setTextColor(\"%@\");", hex];
+//    } else if (tag == 2) {
+//        trigger = [NSString stringWithFormat:@"zss_editor.setBackgroundColor(\"%@\");", hex];
+//    }
+//    [self.editorView stringByEvaluatingJavaScriptFromString:trigger];
+//    
+//}
 
 - (void)undo:(ZSSBarButtonItem *)barButtonItem {
     [self.editorView stringByEvaluatingJavaScriptFromString:@"zss_editor.undo();"];
@@ -1340,5 +1344,25 @@ static Class hackishFixClass = Nil;
     }
 }
 
+@end
+
+@interface ZSSRichTextEditor (ColorPicker) <ColorPickerViewControllerDelegate>
+
+@end
+
+@implementation ZSSRichTextEditor (ColorPicker)
+
+- (void)setSelectedColor:(UIColor*)color tag:(int)tag {
+    
+    NSString *hex = [NSString stringWithFormat:@"#%6@",color.hexString];
+    NSString *trigger;
+    if (tag == 1) {
+        trigger = [NSString stringWithFormat:@"zss_editor.setTextColor(\"%@\");", hex];
+    } else if (tag == 2) {
+        trigger = [NSString stringWithFormat:@"zss_editor.setBackgroundColor(\"%@\");", hex];
+    }
+    [self.editorView stringByEvaluatingJavaScriptFromString:trigger];
+    
+}
 
 @end

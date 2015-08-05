@@ -25,6 +25,21 @@
               forControlEvents:UIControlEventValueChanged];
     [self.view addSubview:_colorPickerView];
     
+    UIView *view = _colorPickerView;
+    id topGuide = myViewController.topLayoutGuide;
+    NSDictionary *views = NSDictionaryOfVariableBindings (view, topGuide);
+    NSArray *vConstraints = [NSLayoutConstraint constraintsWithVisualFormat:@"V:[topGuide]-0-[view]-0-|"
+                                                                    options:0
+                                                                    metrics:nil
+                                                                      views:views];
+    [self.view addConstraints:vConstraints];
+    NSArray *hConstraints = [NSLayoutConstraint constraintsWithVisualFormat:@"H:|-0-[_colorPickerView]-0-|"
+                                                                    options:0
+                                                                    metrics:nil
+                                                                      views:views];
+    [self.view addConstraints:hConstraints];
+    
+    [self.view layoutIfNeeded];
     // Do any additional setup after loading the view.
 }
 
